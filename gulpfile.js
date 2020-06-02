@@ -3,13 +3,13 @@ var sass = require('gulp-sass');
 var browserSync = require
 
 gulp.task('sass', function(){
-    return gulp.src('app/scss/**/*.scss')
+    return gulp.src('./scss/**/*.scss')
     .pipe(sass())
-    .pipe(gulp.dest('app/css'))
+    .pipe(gulp.dest('./css'))
 }); 
 
 gulp.task('watch', function(){
-    gulp.watch('app/scss/**/*.scss', gulp.parallel('sass'));
+    gulp.watch('./scss/**/*.scss', gulp.parallel('sass'));
 })
 
 
