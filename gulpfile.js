@@ -3,17 +3,22 @@ var sass = require('gulp-sass');
 //var browserSync = require('browser-sync').create();
 
 gulp.task('sass', function(){
-    return gulp.src('./scss/**/*.scss')
+    return gulp.src('./scss/*.scss')
     .pipe(sass())
     .pipe(gulp.dest('./css'))
     // .pipe(browserSync.reload({
     //     stream: true
     // }))
-}); 
+});
+
+gulp.task('run', gulp.parallel('sass'));
 
 gulp.task('watch', function(){
-    gulp.watch('./scss/**/*.scss', gulp.parallel('sass'));
-})
+    gulp.watch('./scss/*.scss', gulp.parallel('sass'));
+});
+
+gulp.task('default', gulp.parallel('run', 'watch'));
+
 
 // gulp.task('browserSync', function(){
 //     browserSync.init({
