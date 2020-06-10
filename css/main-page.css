@@ -1,13 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap");
 * {
   box-sizing: border-box; }
 
 body {
-  height: 100%;
-  margin: 0; }
-
-.background {
-  background-image: url("images/cat-header.jpg");
-  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  background: url("../images/cat-header.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
@@ -15,16 +13,58 @@ body {
 /* Style the top navigation bar */
 .navbar {
   display: flex;
-  background-color: #333; }
+  background-color: gray;
+  opacity: 30%; }
 
 /* Style the navigation bar links */
 .navbar a {
   color: white;
   padding: 14px 20px;
   text-decoration: none;
-  text-align: center; }
+  text-align: center;
+  opacity: 100%; }
 
 /* Change color on hover */
 .navbar a:hover {
   background-color: #ddd;
   color: black; }
+
+.heading {
+  float: left;
+  margin-left: 120px;
+  margin-top: 250px;
+  font-size: 40px;
+  line-height: 26.4px; }
+
+.heading h1 {
+  font-family: 'Balsamiq Sans', cursive; }
+
+.heading p {
+  font-family: 'Balsamiq Sans', cursive; }
+
+.buttons {
+  background-color: gray;
+  border-color: black;
+  border: 10px;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer; }
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  text-align: center; }
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .body, .navbar, .footer {
+    flex-direction: column; } }
