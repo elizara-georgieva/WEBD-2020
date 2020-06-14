@@ -1,0 +1,16 @@
+/* Style the top navigation bar */
+.navbar {
+  display: flex;
+  background-color: #C7B0A9;
+  opacity: 50%;
+  /* Style the navigation bar links */
+  /* Change color on hover */ }
+  .navbar a {
+    color: #211D1C;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    opacity: 100%; }
+  .navbar a:hover {
+    background-color: #D2CED1;
+    color: black; }

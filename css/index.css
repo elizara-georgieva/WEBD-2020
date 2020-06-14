@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap");
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: url("../images/cat-header.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+
+.heading {
+  margin-left: 120px;
+  margin-top: 250px;
+  font-size: 40px;
+  line-height: 26.4px; }
+  .heading h1 {
+    font-family: 'Balsamiq Sans', cursive;
+    color: #353B3C; }
+  .heading p {
+    font-family: 'Balsamiq Sans', cursive;
+    color: #748E54; }
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  flex-direction: row;
+  list-style: none;
+  justify-content: flex-start;
+  margin-left: 120px; }
+  .flex-container .flex-item {
+    padding: 15px;
+    margin-right: 20px;
+    line-height: 20px;
+    background: #C7B0A9;
+    text-align: center;
+    border: 1px solid green; }
+    .flex-container .flex-item a {
+      color: white;
+      font-weight: bold;
+      font-size: 0.5em;
+      text-decoration: none; }
+
+.home-menu {
+  font-size: 40px; }
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .body, .navbar, .footer {
+    flex-direction: column; } }
+
+@media screen and (max-width: 700px) {
+  .heading {
+    margin: 0;
+    text-align: center; }
+    .heading p {
+      line-height: 40px; }
+  .flex-container {
+    margin: 0;
+    justify-content: center; } }
