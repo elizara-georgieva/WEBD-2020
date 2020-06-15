@@ -1,10 +1,7 @@
-/* Style the top navigation bar */
 .navbar {
   display: flex;
   background-color: #C7B0A9;
-  opacity: 50%;
-  /* Style the navigation bar links */
-  /* Change color on hover */ }
+  opacity: 50%; }
   .navbar a {
     color: #211D1C;
     padding: 14px 20px;
