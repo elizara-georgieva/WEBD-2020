@@ -19,15 +19,15 @@ body {
     font-size: 40px; 
     line-height: 26.4px;
 
-  h1{
-    font-family: 'Balsamiq Sans', cursive;
-    color: #353B3C;
-  }
+    h1{
+        font-family: 'Balsamiq Sans', cursive;
+        color: #353B3C;
+    }
 
-  p{
-    font-family: 'Balsamiq Sans', cursive;
-    color: #748E54
-  }
+    p{
+        font-family: 'Balsamiq Sans', cursive;
+        color: #748E54
+    }
 }
 
 // .buttons {
@@ -50,38 +50,54 @@ body {
 //   }
 
 .flex-container {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  overflow: hidden;
-  flex-direction: row;
-  //justify-content: flex-start;
-  list-style: none;
-  justify-content: flex-start;
-  margin-left: 120px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    flex-direction: row;
+    //justify-content: flex-start;
+    list-style: none;
+    justify-content: flex-start;
+    margin-left: 120px;
+    overflow: visible;
 
-  .flex-item {
-    //flex: 1 1 20 em;
-    padding: 15px;
-    margin-right: 20px;
-    line-height: 20px;
-    background: #C7B0A9; 
-    text-align: center;
-    border: 1px solid green;
+    .flex-item {
+        //flex: 1 1 20 em;
+        padding: 15px;
+        margin-right: 20px;
+        line-height: 20px;
+        background: #C7B0A9; 
+        text-align: center;
+        border: 1px solid green;
+        position: relative;
   
-    a{
-      //display: inline-flex;
-      color: white;
-      font-weight: bold;
-      font-size: 0.5em;
-      text-decoration: none;
+    a, span {
+        //display: inline-flex;
+        color: white;
+        font-weight: bold;
+        font-size: 0.5em;
+        text-decoration: none;
+    }
+
+    .dropdown-cont {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        list-style: none;
+        padding: 15px;
+        background: #c7b0a9;
+        border: 1px solid green;
+
+        &.hidden {
+          visibility: hidden;
+      }
     }
   }
 }
 
 .home-menu {
-  font-size: 40px;
+    font-size: 40px;
 }
 
 // .footer {
@@ -102,18 +118,18 @@ body {
 }
 
 @media screen and (max-width: 700px) {
-  .heading {
-    margin: 0;
-    text-align: center;
+    .heading {
+        margin: 0;
+        text-align: center;
 
-    p {
-      line-height: 40px;
+      p {
+          line-height: 40px;
+      }
+  }
+
+    .flex-container {
+        margin: 0;
+        justify-content: center;
+      // flex-direction: column;
     }
-  }
-
-  .flex-container {
-    margin: 0;
-    justify-content: center;
-    // flex-direction: column;
-  }
 }

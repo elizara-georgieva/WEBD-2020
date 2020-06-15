@@ -31,19 +31,31 @@ body {
   flex-direction: row;
   list-style: none;
   justify-content: flex-start;
-  margin-left: 120px; }
+  margin-left: 120px;
+  overflow: visible; }
   .flex-container .flex-item {
     padding: 15px;
     margin-right: 20px;
     line-height: 20px;
     background: #C7B0A9;
     text-align: center;
-    border: 1px solid green; }
-    .flex-container .flex-item a {
+    border: 1px solid green;
+    position: relative; }
+    .flex-container .flex-item a, .flex-container .flex-item span {
       color: white;
       font-weight: bold;
       font-size: 0.5em;
       text-decoration: none; }
+    .flex-container .flex-item .dropdown-cont {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      list-style: none;
+      padding: 15px;
+      background: #c7b0a9;
+      border: 1px solid green; }
+      .flex-container .flex-item .dropdown-cont.hidden {
+        visibility: hidden; }
 
 .home-menu {
   font-size: 40px; }

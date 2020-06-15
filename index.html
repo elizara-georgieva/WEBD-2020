@@ -21,17 +21,27 @@
 	</div> -->
 
 	<div class = "heading">
-			<h1>Cats</h1>
-			<p>Everything you<strong> should </strong> know</p>
+		<h1>Cats</h1>
+		<p>Everything you<strong> should </strong> know</p>
 	</div>
+
 	<div class="home-menu">
 		<ul class="flex-container">
-			<li class="flex-item">
-				<button onclick="myFunction()" class="dropbtn">Dropdown</button>
-				<div id="myDropdown" class="dropdown-content">
-				<a href="#">Link 1</a>
-				<a href="#">Link 2</a>
-				</div>
+			<li class="flex-item" onclick="toggleDropdown(this)">
+				<span>Dropdown</span>
+				<ul class="dropdown-cont hidden">
+					<li>
+						<a href="shorthaired.html">shorthaired</a>
+					</li>
+					<li>
+						<a href="siamese.html">siamese</a>
+					</li>
+				</ul>
+				<!-- <button onclick="myFunction()" class="dropbtn">Dropdown</button> -->
+				<!-- <div id="myDropdown" class="dropdown-content">
+				<a href="shorthaired.html">shorthaired</a>
+				<a href="siamese.html">siamese</a>
+				</div> -->
 			</li>
 			<li class="flex-item">
 				<a href = "Breeds.html">Breeds</a>
@@ -44,14 +54,15 @@
 			</li>
 		</ul>
 	</div>
+</div>
 
-	<div class="dropdown">
+	<!-- <div class="dropdown">
 		<button onclick="myFunction()" class="dropbtn">Dropdown</button>
 		<div id="myDropdown" class="dropdown-content">
 		  <a href="#">Link 1</a>
 		  <a href="#">Link 2</a>
 		</div>
-	  </div>
+	  </div> -->
 
 	<!-- <div class = "buttons">
 		<a href = "About-cats.html">About cats</button>
@@ -65,6 +76,16 @@
 	<!-- <div class="footer">
 	<h2>Footer</h2>
 	</div> -->
-</div>
+
+<script type="text/javascript">
+	function toggleDropdown(parent) {
+		const innerList = parent.getElementsByClassName('dropdown-cont')[0]
+		if(innerList.classList.contains('hidden')) {
+			innerList.classList.remove('hidden')
+		} else {
+			innerList.classList.add('hidden')
+		}
+	}
+</script>
 </body>
 </html>
